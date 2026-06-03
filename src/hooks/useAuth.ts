@@ -1,0 +1,27 @@
+// ============================================================================
+// hooks/useAuth.ts
+// Acceso al estado de autenticación + multi-tenancy
+// ============================================================================
+// Expone:
+//   - usuario, perfil               → identidad
+//   - membresias, orgActiva, rol    → multi-tenancy
+//   - cargando, error               → UI state
+//   - iniciarSesion, cerrarSesion   → auth
+//   - cambiarOrgActiva              → cambio de tenant
+//   - refrescarMembresias           → tras invitación aceptada
+//
+// Uso:
+//   const { orgActiva, rol } = useAuth();
+//   if (rol === 'abogado') { ... }
+// ============================================================================
+
+import { useContext } from 'react';
+import { AuthContext } from '../contexts/AuthContext';
+
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth debe ser usado dentro de AuthProvider');
+  }
+  return context;
+};
