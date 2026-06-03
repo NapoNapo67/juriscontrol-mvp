@@ -183,3 +183,4 @@ CSS global en `src/styles/globals.css` con:
 ## Licencia
 
 Todos los derechos reservados © 2026 RANNIX Consulting
+"# juriscontrol-mvp" 
