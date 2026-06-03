@@ -183,7 +183,7 @@ export const Invitaciones: React.FC = () => {
           color: badge.color,
           padding: '0.25rem 0.5rem',
           borderRadius: '3px',
-          font-size: '12px',
+          fontSize: '12px',
           fontWeight: '600',
         }}
       >
